@@ -17,6 +17,7 @@ after_success:
   #log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #Take those images and push them to docker hub
+  #Must do docker logout and docker login in terminal before pushing to docker hub
   - docker push pankajnalin/multi-client
   - docker push pankajnalin/multi-nginx
   - docker push pankajnalin/multi-server
